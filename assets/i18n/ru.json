@@ -1,0 +1,118 @@
+{
+	"app_bar": {
+		"title": "Добро пожаловать на домашнюю страницу"
+	},
+	"button": {
+		"cancel": "Отменить",
+		"change_language": "Изменить язык",
+		"logout": "Выйти",
+		"dark_mode_switch": "Переключиться в темную тему",
+		"login": "Войти",
+		"sign_in": "Войти",
+		"sign_up": "Зарегестрироваться",
+		"forgot_password": "Забыл пароль",
+		"reset_password": "Сбросить пароль",
+		"register": "Зарегестрироваться"
+	},
+	"text_fields" : {
+		"hint_chat_field": "Введите свое сообщение..",
+		"email_field": "Email",
+		"hint_email_field": "Введите email",
+		"hint_password_field": "Введите пароль",
+		"password_field": "Пароль"
+	},
+	"language": {
+		"title": "Язык",
+		"name": {
+			"en": "Английский",
+			"es": "Испанский",
+			"fa": "Персидский",
+			"ar": "Арабский",
+			"de": "Немецкий",
+			"pl": "Польский",
+			"pt": "Португальский",
+			"fr": "Французский",
+			"ru": "Русский",
+			"sv": "Шведский",
+			"no": "Норвежский",
+			"it": "Интальянский",
+			"uk": "Украинский"
+		},
+		"selected_message": "Текущий язык {language}",
+		"selection": {
+			"message": "Пожалуйста выберите язык из списка",
+			"title": "Выбор языка"
+		}
+	},
+	"plural": {
+		"demo": {
+			"0": "Please start pushing the 'plus' button.",
+			"1": "You have pushed the button one time.",
+			"else": "You have pushed the button {{value}} times."
+		}
+	},
+	"status": {
+		"online": "Онлайн",
+		"offline": "Оффлайн"
+	},
+	"chats": {
+		"title": "Чаты",
+		"latest": "Новые",
+		"pinned": "Закрепленные",
+		"unread": "Непрочитанные",
+		"search_chats": "Найти чат",
+		"delete_this_chat": "Удалить чат"
+	},
+	"contacts": {
+		"title": "Контакты",
+		"search_contacts": "Найти контакт"
+	},
+	"chat": {
+		"title": "Чат",
+		"delete_this_message": "Удалить сообщение",
+		"no_messages": "Нет сообщений"
+	},
+	"settings": {
+		"title": "Настройки",
+		"about": "О себе"
+	},
+	"sign_in": {
+		"title": "Войти в свой аккаунт"
+	},
+	"register": {
+		"title": "Создать аккаунт"
+	},
+	"reset_password": {
+		"title": "Сбросить пароль"
+	},
+	"notification_snack_bar": {
+		"success_deleted_chat": "Чат успешно удален",
+		"success_deleted_message": "Сообщение успешно удалено",
+		"success_upload": "Изображение загружено",
+		"file_is_not_image": "Файл не является изображением",
+		"empty_about": "Не введено о себе",
+		"empty_name": "Не введено имя",
+		"empty_email": "Не введен email",
+		"changes_saved": "Changes saved successfully"
+	},
+	"show_dialog" : {
+		"invalid_email": "Неверный Email",
+		"user_not_found": "Юзер не существует",
+		"wrong_password": "Неверный пароль",
+		"weak_password": "Слабый пароль",
+		"already_in_use_email":"Пользователь с таким Email уже существует",
+		"reset_password_successfully": "Инструкции по сбросу пароля отправлены вам на email",
+		"no_user_in_db": "Юзер не найден. Возможно он был удален.",
+		"bad_email": "Неверный формат email",
+		"network_error": "Ошибка сети, проверьте интернет соединение",
+		"okay": "Окей",
+		"close": "Закрыть",
+		"empty_password_field":"Поле для ввода пароля не заполнено.",
+		"empty_email_field":"Поле для ввода email не заполнено."
+	},
+	"time": {
+		"day_ago": "День назад",
+		"days_ago": "Дней назад",
+		"no_time": "Нет данных"
+	}
+}

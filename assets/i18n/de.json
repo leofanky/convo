@@ -1,0 +1,119 @@
+{
+	"app_bar": {
+		"title": "Willkommen auf der Startseite"
+	},
+	"button": {
+		"cancel": "Abbrechen",
+		"change_language": "Sprache ändern",
+		"logout": "Abmelden",
+		"dark_mode_switch": "Wechseln in den dunklen Modus",
+		"login": "Einloggen",
+		"sign_in": "Anmelden",
+		"sign_up": "Registrieren",
+		"forgot_password": "Passwort vergessen",
+		"reset_password": "Passwort zurücksetzen",
+		"register": "Register"
+	},
+	"text_fields" : {
+		"hint_chat_field": "Schreiben Sie ihre Nachricht hier ...",
+		"email_field": "E-Mail-Adresse",
+		"hint_email_field": "Geben sie ihre E-Mail-Adresse ein",
+		"hint_password_field": "Geben Sie Ihr Passwort ein",
+		"password_field": "Passwort"
+	},
+	"language": {
+		"title": "Sprache",
+		"name": {
+			"en": "English",
+			"es": "Spanisch",
+			"fa": "Per­sisch",
+			"ar": "Arabisch",
+			"de": "Deutsch",
+			"pl": "Pol­nisch",
+			"pt": "Por­tu­gie­sisch",
+			"fr": "Französisch",
+			"ru": "Russisch",
+			"sv": "Schwedisch",
+			"no": "Norwegisch",
+			"it": "Italienisch",
+			"uk": "Ukrainisch"
+		},
+		"selected_message": "Derzeit ausgewählte Sprache ist {Sprache}",
+		"selection": {
+			"message": "Bitte wählen Sie eine Sprache aus der Liste",
+			"title": "Sprache auswählen"
+		}
+	},
+	"plural": {
+		"demo": {
+			"0": "Bitte drücken Sie die Plus-Taste.",
+			"1": "Sie haben den Knopf einmal gedrückt.",
+			"else": "Sie haben die Taste {{value}} mal gedrückt."
+		}
+	},
+	"status": {
+		"online": "Online",
+		"offline": "Offline"
+	},
+	"chats": {
+		"title": "chats",
+		"latest": "Letzte",
+		"pinned": "Gepinnt",
+		"unread": "Ungelesen",
+		"search_chats": "Chats suchen",
+		"delete_this_chat": "Chats löschen"
+	},
+	"contacts": {
+		"title": "Kontakte",
+		"search_contacts": "Kontakte suchen"
+	},
+	"chat": {
+		"title": "Chat",
+		"delete_this_message": "Nachricht löschen",
+		"no_messages": "Noch keine Nachrichten"
+	},
+	"settings": {
+		"title": "Einstellungen",
+		"about": "Über mir"
+	},
+	"sign_in": {
+		"title": "Ins Konto einloggen"
+	},
+	"register": {
+		"title": "Ein neues Konto erstellen"
+	},
+	"reset_password": {
+		"title": "Passwort zurücksetzen"
+	},
+	"notification_snack_bar": {
+		"success_deleted_chat": "Der Chat wurde erfolgreich gelöscht",
+		"success_deleted_message": "Die Nachricht wurde erfolgreich gelöscht",
+		"success_upload": "Die Datei wurde hochgeladen",
+		"file_is_not_image": "Die ausgewählte Datei ist kein Foto",
+		"empty_about": "Leer über mir ",
+		"empty_name": "Leerer Name",
+		"empty_email": "Leerer E-Mail-Adresse",
+		"empty_password": "Leerer Passwort",
+		"changes_saved": "Die Änderungen wurden erfolgreich gespeichert"
+	},
+	"show_dialog" : {
+		"invalid_email": "Ungültige E-Mail-Adresse",
+		"user_not_found": "Benutzer wurde nicht gefunden",
+		"wrong_password": "Falsches Passwort",
+		"weak_password": "Schwaches Passwort",
+		"already_in_use_email":"E-Mail-Adresse wird bereits verwendet",
+		"reset_password_successfully": "Ein Link zur Passwortänderung wurde an Ihre E-Mail-Adresse gesendet",
+		"no_user_in_db": "Es gibt keinen Benutzerdatensatz, der dieser Kennung entspricht. Der Benutzer wurde möglicherweise gelöscht.",
+		"bad_email": "Die E-Mail-Adresse ist schlecht formatiert",
+		"network_error": "Netzwerkfehler, überprüfen Sie Ihre Internetverbindung",
+		"okay": "okay",
+		"close": "Schließen",
+		"empty_password_field":"Das Passwortfeld ist leer.",
+		"empty_email_field":"Das E-Mail-Adressefeld ist leer."
+	},
+	"time": {
+		"day_ago": "Vor einem Tag",
+		"days_ago": "Vor 1 Tagen",
+		"no_time": "keine Zeitdaten"
+	}
+}

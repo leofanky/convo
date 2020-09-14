@@ -1,0 +1,125 @@
+{
+	"app_bar": {
+		"title": "Welcome to the home page"
+	},
+	"button": {
+		"cancel": "Cancel",
+		"change_language": "Change Language",
+		"logout": "Log Out",
+		"dark_mode_switch": "Switch to dark mode",
+		"login": "Log in",
+		"sign_in": "Sign In",
+		"sign_up": "Sign Up",
+		"forgot_password": "Forgot password",
+		"reset_password": "Reset password",
+		"register": "Register",
+		"delete_account": "Delete Account & Data"
+	},
+	"text_fields" : {
+		"hint_chat_field": "Type your message here...",
+		"email_field": "Email",
+		"hint_email_field": "Enter your email",
+		"hint_password_field": "Enter your password",
+		"password_field": "Password"
+	},
+	"language": {
+		"title": "Language",
+		"name": {
+			"en": "English",
+			"es": "Spanish",
+			"fa": "Persian",
+			"ar": "Arabic",
+			"de": "German",
+			"pl": "Polish",
+			"pt": "Portuguese",
+			"fr": "French",
+			"ru": "Russian",
+			"sv": "Swedish",
+			"no": "Norwegian",
+			"it": "Italian",
+			"uk": "Ukrainian"
+		},
+		"selected_message": "Currently selected language is {language}",
+		"selection": {
+			"message": "Please select a language from the list",
+			"title": "Select Language"
+		}
+	},
+	"plural": {
+		"demo": {
+			"0": "Please start pushing the 'plus' button.",
+			"1": "You have pushed the button one time.",
+			"else": "You have pushed the button {{value}} times."
+		}
+	},
+	"status": {
+		"online": "Online",
+		"offline": "Offline"
+	},
+	"chats": {
+		"title": "chats",
+		"latest": "Latest",
+		"pinned": "Pinned",
+		"unread": "Unread",
+		"search_chats": "Search chats",
+		"delete_this_chat": "Delete this chat"
+	},
+	"contacts": {
+		"title": "Contacts",
+		"search_contacts": "Search contacts"
+	},
+	"chat": {
+		"title": "Chat",
+		"delete_this_message": "Delete this message",
+		"no_messages": "No messages yet"
+	},
+	"settings": {
+		"title": "Settings",
+		"about": "About"
+	},
+	"sign_in": {
+		"title": "Sign In to Your Account"
+	},
+	"register": {
+		"title": "Sign Up a New Account"
+	},
+	"reset_password": {
+		"title": "Reset password"
+	},
+	"notification_snack_bar": {
+		"success_deleted_chat": "The chat was successfully deleted",
+		"success_deleted_message": "The message was successfully deleted",
+		"success_upload": "The file has been uploaded",
+		"file_is_not_image": "This file is not an image",
+		"empty_about": "Empty About",
+		"empty_name": "Empty Name",
+		"empty_email": "Empty Email",
+		"empty_password": "Empty Password",
+		"changes_saved": "The changes have been successfully saved",
+		"account_successfully_deleted": "Your account and data successfully deleted"
+	},
+	"show_dialog" : {
+		"invalid_email": "The email address isn’t correct.",
+		"user_not_found": "User Not Found",
+		"wrong_password": "Wrong Password",
+		"weak_password": "Weak Password",
+		"already_in_use_email":"Email already in use",
+		"reset_password_successfully": "A password change link has been sent to your e-mail address",
+		"no_user_in_db": "There is no user record corresponding to this identifier. The user may have been deleted.",
+		"bad_email": "The email address is badly formatted",
+		"network_error": "Network error, check your internet connection",
+		"okay": "Okay",
+		"close": "Close",
+		"empty_password_field":"The password field is empty.",
+		"empty_email_field":"The email field is empty."
+	},
+	"time": {
+		"day_ago": "Day ago",
+		"days_ago": "Days ago",
+		"no_time": "no time data"
+	},
+	"delete_account": {
+		"title": "Delete your Account & Data",
+		"enter_password": "Confirm password for deleting your account and data"
+	}
+}

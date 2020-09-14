@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "155687500607",
+    "firebase_url": "https://convo10.firebaseio.com",
+    "project_id": "convo10",
+    "storage_bucket": "convo10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155687500607:android:7d87b367e4e560f2c7318a",
+        "android_client_info": {
+          "package_name": "com.LeonardoFanchini.convo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155687500607-7omub67s1e14qnnl5qlvpvthl6v4l405.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRYw0bNVre2H_wax2YhVwvgKH5-fLYMB8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155687500607-7omub67s1e14qnnl5qlvpvthl6v4l405.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
