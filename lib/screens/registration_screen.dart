@@ -64,7 +64,6 @@ class _RegistrationScreenState extends State<RegistrationScreen>
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                /// TODO write correct text inside this alert content
                 Text(errorText),
               ],
             ),

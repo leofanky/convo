@@ -314,7 +314,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                                           color: Colors.white,
                                                         ),
                                                       ),
-                                                      // Loading
                                                       Positioned(
                                                         child: isLoading
                                                             ? Container(

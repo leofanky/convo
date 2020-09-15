@@ -19,20 +19,7 @@ class _DeleteAccountScreenState extends State<DeleteAccountScreen> {
   String resetError;
   bool visibleSpinner = false;
 
-  void assignEmailToTextField() {
-    //    Future.delayed(Duration.zero, () {
-    //      setState(() {
-    //        registrationArguments = ModalRoute.of(context).settings.arguments;
-    //      });
-    //
-    //      if (registrationArguments.currentEmail != null) {
-    //        _emailResetPassword.text = registrationArguments.currentEmail;
-    //        email = registrationArguments.currentEmail;
-    //      } else {
-    //        _emailResetPassword.text = '';
-    //      }
-    //    });
-  }
+  void assignEmailToTextField() {}
 
   Future<void> _showErrorDialog(String errorText, Function onPressed) async {
     return showDialog<void>(
@@ -44,7 +31,6 @@ class _DeleteAccountScreenState extends State<DeleteAccountScreen> {
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                /// TODO write correct text inside this alert content
                 Text(errorText),
               ],
             ),

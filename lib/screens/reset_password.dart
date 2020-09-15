@@ -76,7 +76,6 @@ class _ResetPasswordState extends State<ResetPassword> {
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                /// TODO write correct text inside this alert content
                 Text(errorText),
               ],
             ),
@@ -114,7 +113,6 @@ class _ResetPasswordState extends State<ResetPassword> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     assignEmailToTextField();
   }

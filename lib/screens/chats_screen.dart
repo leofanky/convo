@@ -10,10 +10,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:encrypt/encrypt.dart' as encrypt;
 
-/// FireStore and FireBase Auth instance variables
 final _firestore = Firestore.instance;
-
-/// Current user email variable
 String currentUserEmail;
 
 class ChatsScreen extends StatefulWidget {
@@ -23,34 +20,14 @@ class ChatsScreen extends StatefulWidget {
 }
 
 class _ChatsScreenState extends State<ChatsScreen> {
-  ///
-  /// VARIABLES:
-  ///
-
-  /// Shared preferences
   Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
-
-  /// The user email
   String _email;
-
-  /// Initial stream
   Stream<QuerySnapshot> _streamChats =
       _firestore.collection('chats').snapshots();
-
-  /// Stream for user1
   Stream<QuerySnapshot> _streamChats1;
-
-  /// Stream for user2
   Stream<QuerySnapshot> _streamChats2;
-
-  /// Common Stream
   Stream<List<QuerySnapshot>> bothStreams;
 
-  ///
-  /// FUNCTIONS & METHODS:
-  ///
-
-  /// Method to get local data from Shared Prefs
   void getLocalData() async {
     final SharedPreferences prefs = await _prefs;
     _email = prefs.getString('email');
@@ -60,22 +37,13 @@ class _ChatsScreenState extends State<ChatsScreen> {
     print('shared prefs chats screen $currentUserEmail');
   }
 
-  /// Initial state of Chats Screen
   @override
   void initState() {
     super.initState();
-
-    // Called method get local data shared prefs
     getLocalData();
-
-    // Initial Stream
     bothStreams = StreamZip([_streamChats]);
   }
 
-  /// Method to check who is current user
-  /// TODO make different file services with class with methods which call this getCurrentUser , createusers etc...
-
-  /// Searches chats by username
   _filterChats(String searchQuery) {
     List<String> _filteredList = [];
 
@@ -109,12 +77,8 @@ class _ChatsScreenState extends State<ChatsScreen> {
         );
   }
 
-  ///
-  /// Build Widget:
-  ///
   @override
   Widget build(BuildContext globalContext) {
-    ///TODO make scrollable chats
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       mainAxisAlignment: MainAxisAlignment.start,
@@ -180,56 +144,32 @@ class _ChatsScreenState extends State<ChatsScreen> {
 }
 
 class ChatsStream extends StatelessWidget {
-  ///
-  /// VARIABLES:
-  ///
   ChatsStream({
     this.streamChats,
     this.globalContext,
     this.prefs,
   });
 
-  /// The Stream Chats
   final Stream<List<QuerySnapshot>> streamChats;
-
-  /// The Global context
   final BuildContext globalContext;
-
-  /// The preferences
   final Future prefs;
-
-  /// Unread counter list
   final List<int> countAllUnreadList = [];
 
-  ///
-  /// FUNCTIONS & METHODS:
-  ///
-
-  /// Counts unread messages
   void countAllUnreadMessages(int value, prefs) async {
     countAllUnreadList.add(value);
     countAllUnreadList.length;
-    //final SharedPreferences localPrefs = await prefs;
-    // Setup to local storage
-    //localPrefs.setInt("countAllUnread", countAllUnreadList.length);
   }
 
-  /// Decrypts message
   decryptMessage(encryptedText) {
     if (encryptedText != null) {
       final key = encrypt.Key.fromLength(32);
       final iv = encrypt.IV.fromLength(16);
-
       final encrypter = encrypt.Encrypter(encrypt.AES(key));
       final decrypted = encrypter.decrypt16(encryptedText, iv: iv);
-
       return decrypted;
     }
   }
 
-  ///
-  /// Build Widget:
-  ///
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
@@ -245,16 +185,12 @@ class ChatsStream extends StatelessWidget {
           );
         }
 
-        // Empty list for merging data from multiple streams
         List<DocumentSnapshot> commonList = [];
 
-        // Add data to commonList from first stream
         snapshot.data[0].documents.forEach((element) {
           commonList.add(element);
         });
 
-        // Check if more than one stream
-        // And add data to commonList from second stream
         if (snapshot.data.length > 1) {
           snapshot.data[1].documents.forEach((element2) {
             commonList.add(element2);
@@ -264,17 +200,12 @@ class ChatsStream extends StatelessWidget {
         final chats = commonList;
         List<StreamBuilder<dynamic>> chatWidgets = [];
         for (var chat in chats.reversed) {
-          // Variables from FireStore for every chat
           final userFirst = chat.data['user1'];
           final userSecond = chat.data['user2'];
           final lastMessageText = chat.data['lastMessageText'];
           final lastMessageTime = readTimestamp(chat.data['lastMessageTime']);
           final chatID = chat.documentID;
 
-          // Get data and Create chat widget
-          // Compare current user and recipient
-          // Check chats for current user
-          // Use StreamBuilder for getting unread messages
           if (currentUserEmail == userFirst || currentUserEmail == userSecond) {
             final chatWidget = StreamBuilder(
               stream: chat.reference.collection('messages').snapshots(),
@@ -285,16 +216,12 @@ class ChatsStream extends StatelessWidget {
                   );
                 }
                 final messages = snapshot.data.documents;
-
-                // Fill unread messages list for further counting
                 List<int> countUnread = [];
                 for (var message in messages) {
-                  // check unread messages and check if it was not sender messages
                   if (message.data['read'] == false &&
                       decryptMessage(message.data['receiver']) ==
                           currentUserEmail) {
                     countUnread.add(1);
-                    // count all unread messages
                     countAllUnreadMessages(1, prefs);
                   }
                 }
@@ -319,7 +246,6 @@ class ChatsStream extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    /// TODO make statements if chats empty doesn't show sign LATEST
                     Padding(
                       padding: const EdgeInsets.only(
                         left: 16.0,
@@ -372,10 +298,6 @@ class ChatsStream extends StatelessWidget {
 }
 
 class ChatTile extends StatelessWidget {
-  ///
-  /// VARIABLES:
-  ///
-
   ChatTile({
     this.lastMessageText,
     this.receiverEmail,

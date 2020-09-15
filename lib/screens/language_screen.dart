@@ -28,7 +28,6 @@ class _LanguageScreenState extends State<LanguageScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     getLocalData();
   }

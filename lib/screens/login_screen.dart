@@ -79,7 +79,6 @@ class _LoginScreenState extends State<LoginScreen>
           print('1 step ');
           setLocalData(email);
           Navigator.pushNamed(context, CommonScreen.id);
-          // TODO when user login push online status to firestore
         }
         setState(() {
           visibleSpinner = false;

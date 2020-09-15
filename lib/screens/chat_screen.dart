@@ -56,8 +56,6 @@ class _ChatScreenState extends State<ChatScreen> {
     print('shared prefs chat screen $currentUserEmail');
   }
 
-  // TODO check on iphone set state focus active text field
-
   Future getImage(chatID, receiverEmail, senderEmail) async {
     final pickedFile = await picker.getImage(source: ImageSource.gallery);
     if (pickedFile.path != null) {
@@ -766,7 +764,7 @@ class MessageBubble extends StatelessWidget {
                 elevation: 2.0,
                 color: isCurrent
                     ? type == 'image' && imageUrl != null
-                        ? Color(0xffF3F3F3) // TODO put this color to theming
+                        ? Color(0xffF3F3F3)
                         : Theme.of(context).primaryColor
                     : Colors.white,
                 child: Column(
